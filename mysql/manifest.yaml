@@ -52,7 +52,7 @@ spec:
       component: mysql
       tier: db
   serviceName: "mysql-headless" # this should be head less service name
-  replicas: 2 # by default is 1
+  replicas: 1 # by default is 1
   template:
     metadata:
       labels:
@@ -62,7 +62,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: joindevops/mysql:v1
+        image: navomika18/mysql:v1
         volumeMounts:
         - name: mysql
           mountPath: /data/db
